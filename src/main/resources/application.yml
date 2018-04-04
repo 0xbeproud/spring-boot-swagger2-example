@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: swagger-sample
+
+management:
+  security:
+    enabled: false
+
+logging:
+  file: ${spring.application.name}
+  level:
+    org.springframework:
+      web: 'off'
+      beans: 'off'
+      boot: info
+      security: info
+    springfox.documentation: 'off'
+    com.weproud: debug
+
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: client
+    resource:
+      id: oauth2-resource
+      token-info-uri: http://localhost:9999/oauth/check_token
+
+
