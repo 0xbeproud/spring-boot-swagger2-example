@@ -18,6 +18,11 @@ pipeline {
         sh 'echo \'python run\''
       }
     }
+    stage('request-spot-instance') {
+      steps {
+        echo 'request spot instance'
+      }
+    }
   }
   environment {
     AWS_ACCESS_KEY = 'aws access key'
