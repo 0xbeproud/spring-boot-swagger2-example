@@ -9,13 +9,13 @@ pipeline {
     stage('test') {
       steps {
         echo 'test'
-        sh ' ./gradlew clean test'
+        sh 'python -V'
       }
     }
     stage('build') {
       steps {
         echo 'build'
-        sh './gradlew clean build'
+        sh 'echo \'python run\''
       }
     }
   }
